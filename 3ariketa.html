@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>DOM básico y atributos XHTML</title>
+    <script type="text/javascript">
+        let contador = 1; // Elementuen zenbaketa
+
+        function anade() {
+            // Listako elementu berria sortu
+            const nuevoElemento = document.createElement("li");
+            nuevoElemento.textContent = "Elementu berri " + contador; // Testua gehitzen
+            contador++; // Kontagailua handitu
+
+            // Zerrendan gehitu
+            const lista = document.getElementById("lista");
+            lista.appendChild(nuevoElemento);
+        }
+    </script>
+</head>
+<body>
+    <ul id="lista">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetuer adipiscing elit</li>
+        <li>Sed mattis enim vitae orci</li>
+        <li>Phasellus libero</li>
+        <li>Maecenas nisl arcu</li>
+    </ul>
+    <input type="button" value="Anadir elemento" onclick="anade();">
+</body>
+</html>
