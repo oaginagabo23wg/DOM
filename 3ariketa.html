@@ -4,15 +4,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>DOM básico y atributos XHTML</title>
     <script type="text/javascript">
-        let contador = 1; // Elementuen zenbaketa
+        let contador = 1;
 
         function anade() {
-            // Listako elementu berria sortu
             const nuevoElemento = document.createElement("li");
-            nuevoElemento.textContent = "Elementu berri " + contador; // Testua gehitzen
-            contador++; // Kontagailua handitu
-
-            // Zerrendan gehitu
+            nuevoElemento.textContent = "Elementu berri " + contador; 
+            contador++; 
             const lista = document.getElementById("lista");
             lista.appendChild(nuevoElemento);
         }
